@@ -1,0 +1,1894 @@
+CONSOLE APPLICATION
+1)SORTING NUMBERS
+----------------------
+using System;
+using System.Collections.Generic; using System.Linq;
+using System.Text;
+
+namespace sorting
+{
+class Program
+{
+static void Main(string[] args)
+{
+int i, j, t = 0; int[] a = new int[5];
+Console.WriteLine("Enter the array elements:"); for (i = 0; i <= 4; i++)
+{
+a[i] = int.Parse(Console.ReadLine());
+}
+for (i = 0; i <= 4; i++)
+{
+for (j = i + 1; j <= 4; j++)
+{
+if (a[i] > a[j])
+{
+t = a[i]; a[i] = a[j]; a[j] = t;
+}
+}
+}
+Console.WriteLine("\nAscending Order:"); for (i = 0; i <= 4; i++)
+{
+Console.WriteLine(a[i]);
+}
+Console.WriteLine("\nDecending Order:"); for (i = 4; i >= 0; i--)
+{
+Console.WriteLine(a[i]);
+}
+Console.ReadLine();
+}
+}
+}
+----------
+2) sORTING NAMES
+------------------
+using System;
+using System.Collections.Generic; using System.Linq;
+using System.Text;
+
+namespace sorting
+{
+class Program
+{
+static void Main(string[] args)
+{
+int i, j; string t = " ";
+string[] a = new string[5]; Console.WriteLine("Enter any 5 Names:"); for (i = 0; i <= 4; i++)
+{
+a[i] = Console.ReadLine();
+}
+for (i = 0; i <= 4; i++)
+{
+for (j = i + 1; j <= 4; j++)
+{
+if (a[i].CompareTo(a[j]) == +1)
+{
+t = a[i]; a[i] = a[j]; a[j] = t;
+}
+}
+}
+Console.WriteLine("\nAscending Order:"); for (i = 0; i <= 4; i++)
+{
+Console.WriteLine(a[i]);
+}
+Console.WriteLine("\nDecending Order:"); for (i = 4; i >= 0; i--)
+{
+Console.WriteLine(a[i]);
+}
+Console.ReadLine();
+}
+}
+}
+---------------------------------------------
+3) MATRIX ADDITION
+-----------------------
+using System;
+using System.Collections.Generic; using System.Linq;
+using System.Text;
+
+namespace matrix_addition
+{
+class Program
+{
+static void Main(string[] args)
+{
+int[,] a=new int[3,3];
+int[,] b=new int[3,3];
+int[,] c=new int[3,3]; 
+int i,j;
+Console.WriteLine("Read Matrix1:"); for(i=0;i<=2;i++)
+{
+for(j=0;j<=2;j++)
+{
+a[i,j]=int.Parse(Console.ReadLine());
+}
+}
+Console.WriteLine("Read Matrix2:"); for(i=0;i<=2;i++)
+{
+for(j=0;j<=2;j++)
+{
+b[i,j]=int.Parse(Console.ReadLine());
+}
+}
+Console.WriteLine("Display Matrix1:"); for(i=0;i<=2;i++)
+{
+for(j=0;j<=2;j++)
+{
+Console.Write(a[i,j]+"\t");
+}
+Console.Write("\n");
+}
+Console.WriteLine("Display Matrix2:"); for(i=0;i<=2;i++)
+{
+for(j=0;j<=2;j++)
+{
+Console.Write(b[i,j]+"\t");
+}
+Console.Write("\n");
+ 
+}
+Console.WriteLine("Addition Matrix:"); for (i = 0; i <= 2; i++)
+{
+for (j = 0; j <= 2; j++)
+{
+c[i, j] = a[i, j] + b[i,j];
+}
+}
+for (i = 0; i <= 2; i++)
+{
+for (j = 0; j <= 2; j++)
+{
+Console.Write(c[i, j] + "\t");
+}
+Console.Write("\n");
+}
+Console.ReadLine();
+
+}
+}
+}
+-------------------------
+4) MATRIX SUBTRACTION
+-----------------------------
+using System;
+using System.Collections.Generic; using System.Linq;
+using System.Text;
+
+namespace matrix_subtraction
+{
+class Program
+{
+static void Main(string[] args)
+{
+int[,] a=new int[3,3];
+int[,] b=new int[3,3];
+int[,] c=new int[3,3]; int i,j;
+Console.WriteLine("Read Matrix1:"); for(i=0;i<=2;i++)
+{
+for(j=0;j<=2;j++)
+{
+a[i,j]=int.Parse(Console.ReadLine());
+}
+}
+Console.WriteLine("Read Matrix2:"); for(i=0;i<=2;i++)
+{
+for(j=0;j<=2;j++)
+{
+b[i,j]=int.Parse(Console.ReadLine());
+}
+}
+Console.WriteLine("Display Matrix1:"); for(i=0;i<=2;i++)
+{
+for(j=0;j<=2;j++)
+{
+Console.Write(a[i,j]+"\t");
+}
+Console.Write("\n");
+}
+Console.WriteLine("Display Matrix2:"); for(i=0;i<=2;i++)
+{
+for(j=0;j<=2;j++)
+{
+Console.Write(b[i,j]+"\t");
+}
+Console.Write("\n");
+ 
+}
+Console.WriteLine("Subtraction Matrix:"); for (i = 0; i <= 2; i++)
+{
+for (j = 0; j <= 2; j++)
+{
+c[i, j] = a[i, j] - b[i,j];
+}
+}
+for (i = 0; i <= 2; i++)
+{
+for (j = 0; j <= 2; j++)
+{
+Console.Write(c[i, j] + "\t");
+}
+Console.Write("\n");
+}
+Console.ReadLine();
+ }}}
+_________________________
+5) MATRIX MULTIPLICATION
+----------------
+using System;
+using System.Collections.Generic; using System.Linq;
+using System.Text;
+
+namespace matrix_multiplication
+{
+class Program
+{
+static void Main(string[] args)
+{
+int[,] a = new int[2, 2];
+int[,] b = new int[2, 2];
+int[,] c = new int[2, 2]; int i, j, k, sum = 0;
+Console.WriteLine("Read Matrix1:"); for (i = 0; i <= 1; i++)
+{
+for (j = 0; j <= 1; j++)
+{
+a[i, j] = int.Parse(Console.ReadLine());
+}
+}
+Console.WriteLine("Read Matrix2:"); for (i = 0; i <= 1; i++)
+{
+for (j = 0; j <= 1; j++)
+{
+b[i, j] = int.Parse(Console.ReadLine());
+}
+}
+Console.WriteLine("Display Matrix1:"); for (i = 0; i <= 1; i++)
+{
+for (j = 0; j <= 1; j++)
+{
+Console.Write(a[i, j] + "\t");
+}
+Console.Write("\n");
+}
+Console.WriteLine("Display Matrix2:"); for (i = 0; i <= 1; i++)
+{
+for (j = 0; j <= 1; j++)
+{
+Console.Write(b[i, j] + "\t");
+}
+Console.Write("\n");
+ 
+}Console.WriteLine("Multiplication Matrix:"); for (i = 0; i <= 1; i++)
+{
+for (j = 0; j <= 1; j++)
+{
+for (k = 0; k <= 1; k++)
+{
+sum = sum + a[i, k] *b[k, j];
+}
+c[i, j] = sum; sum = 0;
+}
+}
+for (i = 0; i <= 1; i++)
+{
+for (j = 0; j <= 1; j++)
+{
+Console.Write(c[i, j] + "\t");
+}
+Console.Write("\n");
+}
+Console.ReadLine();
+}}}
+--------------------
+6) TRANSPOSE MATRIX
+-----------------
+using System;
+class TransposeMatrix
+{
+static void Main()
+{
+int rows, cols;
+Console.Write("Enter the number of rows: "); rows = int.Parse(Console.ReadLine()); Console.Write("Enter the number of columns: "); cols = int.Parse(Console.ReadLine());
+int[,] a = new int[rows, cols]; Console.WriteLine("Enter the elements of the matrix:"); for (int i = 0; i < rows; i++)
+{
+for (int j = 0; j < cols; j++)
+{
+a[i, j] = int.Parse(Console.ReadLine());
+}
+}
+
+Console.WriteLine("\nOriginal Matrix:"); for (int i = 0; i < rows; i++)
+{
+for (int j = 0; j < cols; j++)
+{
+Console.Write(a[i, j] + "\t");
+}
+Console.WriteLine();
+}
+
+Console.WriteLine("\nTransposed Matrix:"); for (int i = 0; i < cols; i++)
+{
+for (int j = 0; j < rows; j++)
+{
+Console.Write(a[j, i] + "\t");
+}
+Console.WriteLine();
+}
+}
+}
+------------------------------
+7) FUNCTION OVERLOADING
+-------------------
+using System;
+using System.Collections.Generic; using System.Linq;
+using System.Text;
+
+namespace func_overloading
+{
+class func_overloading
+{
+int c; double t; int rec; float s;
+void area(int r)
+{
+c = (22/7)* r * r;
+Console.WriteLine("Area of a circle:" + c);
+}
+void area(double b, double h)
+{
+t = 0.5 * b * h;
+Console.WriteLine("Area of a triangle:" + t);
+}
+void area(int l, int br)
+{
+rec = l * br;
+Console.WriteLine("Area of a rectangle:" + rec);
+}
+void area(float a)
+{
+s = a * a;
+Console.WriteLine("Area of a square:" + s);
+}
+static void Main(string[] args)
+{
+func_overloading f = new func_overloading(); Console.WriteLine("Enter the radius value for circle:"); int r = int.Parse(Console.ReadLine());
+Console.WriteLine("Enter the base and height value for triangle:"); double b = double.Parse(Console.ReadLine());
+double h = double.Parse(Console.ReadLine());
+Console.WriteLine("Enter the breadth and length value for rectangle:"); int l = int.Parse(Console.ReadLine());
+int br = int.Parse(Console.ReadLine());
+ 
+Console.WriteLine("Enter the side value for square:"); float a = float.Parse(Console.ReadLine());
+
+f.area(r);
+f.area(b, h);
+f.area(l, br);
+f.area(a); Console.ReadLine();
+}
+}
+}
+---------------------------------
+8) INHERITANCE
+--------------------
+using System;
+using System.Collections.Generic; using System.Linq;
+using System.Text;
+
+namespace inhertitence
+{
+class Program
+{
+public string sname, rollno; public void getdata()
+{
+Console.WriteLine("Enter Student Name:"); sname = Console.ReadLine(); Console.WriteLine("Enter Roll No:"); rollno = Console.ReadLine();
+}
+}
+class detail:Program
+{
+public int m1,m2,tot; public double avg; public void calculate()
+{
+Console.WriteLine("Enter Mark1:"); m1 = int.Parse(Console.ReadLine()); Console.WriteLine("Enter Mark2:"); m2 = int.Parse(Console.ReadLine()); tot = m1 + m2;
+avg = tot / 2;
+
+}
+}
+class display:detail
+{
+public void putdata()
+{
+Console.WriteLine("STUDENT DETAILS"); Console.WriteLine("	");
+Console.WriteLine("Name:"+sname); Console.WriteLine("Roll NO:"+rollno); Console.WriteLine("Mark1:"+m1); Console.WriteLine("Mark2:"+m2); Console.WriteLine("Total:"+tot); Console.WriteLine("Average:"+avg);
+}
+static void Main(string[] args)
+{
+display d = new display(); d.getdata(); d.calculate();
+ 
+d.putdata();
+
+
+Console.ReadLine();
+}
+
+}
+}
+---------------------------------
+9) INTERFACE
+--------------------
+using System;
+using System.Collections.Generic; using System.Linq;
+using System.Text;
+namespace employee
+{
+interface details
+{
+void getdata();
+}
+interface display
+{
+void cal(); void putdata();
+}
+class employee1: details,display
+{
+public string empname, empid; public int bsalary;
+public double pf, ta, esi, netsalary; public void getdata()
+{
+Console.WriteLine("Enter the Employee name"); empname = Console.ReadLine(); Console.WriteLine("Enter the Employee ID"); empid = Console.ReadLine(); Console.WriteLine("Enter the Basic Salary"); bsalary = int.Parse(Console.ReadLine());
+}
+public void cal()
+{
+pf = bsalary * 0.3; esi = bsalary * 0.3; ta = bsalary * 0.4;
+netsalary=(bsalary+ta)-pf-esi;
+}
+public void putdata()
+{
+pf = bsalary * 0.3; esi = bsalary * 0.3; ta = bsalary * 0.4;
+netsalary = (bsalary + ta) - pf - esi; Console.WriteLine("EMPLOYEE DETAILS"); Console.WriteLine("Employee Name:"+empname); Console.WriteLine("Employee ID:"+empid); Console.WriteLine("Basic Salary:"+bsalary); Console.WriteLine("PF:"+pf); Console.WriteLine("TA:"+ta); Console.WriteLine("ESI:"+esi);
+ 
+Console.WriteLine("Net Salary:"+netsalary);
+
+}
+static void Main(string[] args)
+{
+employee1 e = new employee1(); e.getdata();
+e.cal();
+e.putdata(); Console.ReadLine();
+
+}
+}
+}
+--------------------------
+10) USER DEFINED
+---------------------
+using System;
+using System.Collections.Generic; using System.Linq;
+using System.Text;
+
+namespace division
+{
+class division : Exception
+{
+static void Main(string[] args)
+{
+ 
+try
+{
+ 
+
+Console.WriteLine("Enter a and b value:"); int a = int.Parse(Console.ReadLine()); int b = int.Parse(Console.ReadLine());
+if (b == 0)
+{
+ 
+throw new division();
+}
+int c = a / b; Console.WriteLine("Division Result:"+c);
+}
+catch (division d)
+{
+Console.WriteLine("Divide by zero Exception");
+}
+Console.ReadLine();
+}
+} }
+------------------------
+11) READ AND WRITE 
+---------------------
+using System;
+using System.Collections.Generic; using System.Linq;
+using System.Text; using System.IO;
+
+namespace readwrite_textfiles
+{
+class Program
+{
+static void Main(string[] args)
+{
+StreamReader fi = null; StreamWriter fo = null; String s;
+try
+{
+fi = new StreamReader("D:\\csc\\ant.txt"); fo = new StreamWriter("D:\\csc\\ant1.txt"); s=fi.ReadLine();
+while (s != null)
+{
+fo.WriteLine(s);
+s = fi.ReadLine();
+}
+Console.WriteLine("Readed and Writed Successfully"); Console.ReadLine();
+}
+finally
+{
+fi.Close();
+fo.Close();
+}
+}
+} }
+-------------------------------------------------------------------------------------
+WINDOWS FORM APPLICATION (ASP.NET)
+1) CALCULATOR
+---------------
+using System;
+using System.Collections.Generic; using System.ComponentModel; using System.Data;
+using System.Drawing; using System.Linq; using System.Text;
+using System.Windows.Forms;
+
+namespace arithmetic
+{
+public partial class Form1 : Form
+{
+int i,j,k; public Form1()
+{
+InitializeComponent();
+}
+
+private void button1_Click(object sender, EventArgs e)
+{
+i = int.Parse(textBox1.Text);
+j = int.Parse(textBox2.Text);
+k = i + j;
+textBox3.Text = Convert.ToString(k);
+}
+private void button2_Click(object sender, EventArgs e)
+{
+i = int.Parse(textBox1.Text);
+j = int.Parse(textBox2.Text);
+k = i -j;
+textBox3.Text = Convert.ToString(k);
+}
+private void button3_Click(object sender, EventArgs e)
+{
+i = int.Parse(textBox1.Text);
+j = int.Parse(textBox2.Text);
+k = i * j;
+textBox3.Text = Convert.ToString(k);
+}
+
+private void button4_Click(object sender, EventArgs e)
+{
+i = int.Parse(textBox1.Text);
+j = int.Parse(textBox2.Text);
+k =i / j;
+ 
+textBox3.Text = Convert.ToString(k);
+}
+
+private void button5_Click(object sender, EventArgs e)
+{
+ i = int.Parse(textBox1.Text);
+j = int.Parse(textBox2.Text);
+k = i % j;
+textBox3.Text = Convert.ToString(k);
+}
+}
+OUTPUT: ADD BUTTON CLICK,SUB,MUL,DIV,MOD
+--------------------------------------
+2) NOTEPAD
+---------------
+using System;
+using System.Collections.Generic; using System.ComponentModel; using System.Data;
+using System.Drawing; using System.Linq; using System.Text;
+using System.Windows.Forms;
+namespace notepad
+{
+public partial class Form1 : Form
+{
+public Form1()
+{
+InitializeComponent();
+}
+
+private void newToolStripMenuItem_Click(object sender, EventArgs e)
+{
+richTextBox1.Text = " ";
+}
+private void openToolStripMenuItem_Click(object sender, EventArgs e)
+{
+openFileDialog1.ShowDialog();
+richTextBox1.LoadFile(openFileDialog1.FileName, RichTextBoxStreamType.PlainText);
+}
+private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+{
+saveFileDialog1.ShowDialog();
+richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.PlainText);
+}
+
+
+private void saveAsToolStripMenuItem_Click(object sender, EventArgs e)
+{
+saveFileDialog1.ShowDialog();
+richTextBox1.SaveFile(saveFileDialog1.FileName, RichTextBoxStreamType.PlainText);
+}
+private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+{
+Application.Exit();
+}
+
+private void cutToolStripMenuItem_Click(object sender, EventArgs e)
+{
+richTextBox1.Cut();
+}
+
+
+private void copyToolStripMenuItem_Click(object sender, EventArgs e)
+ 
+{
+richTextBox1.Copy();
+}
+private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
+{
+richTextBox1.Paste();
+}
+
+private void fontToolStripMenuItem1_Click(object sender, EventArgs e)
+{
+fontDialog1.ShowDialog(); richTextBox1.Font = fontDialog1.Font;
+}
+private void fontColourToolStripMenuItem_Click(object sender, EventArgs e)
+{
+colorDialog1.ShowDialog(); richTextBox1.ForeColor = colorDialog1.Color;
+}
+private void backgroundColourToolStripMenuItem_Click(object sender, EventArgs e)
+{
+colorDialog1.ShowDialog(); richTextBox1.BackColor= colorDialog1.Color;
+}
+}
+}
+OUTPUT:MENUSTRIP,NEW CLICK,RICHTEXTBOX,OPENFILEDIALOG,SAVEDIALOG,FONTDILOG,COLORDIALOG
+---------------------------
+3) TREEVIEW AND LISTVIEW
+--------------------
+using System;
+using System.Collections.Generic; using System.ComponentModel; using System.Data;
+using System.Drawing; using System.Linq; using System.Text;
+using System.Windows.Forms;
+namespace statees
+{
+public partial class Form1 : Form
+{
+public Form1()
+{
+InitializeComponent();
+}
+
+private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+{
+listView1.Clear();
+if (treeView1.SelectedNode.Text == "Tamilnadu")
+{
+listView1.Items.Add("Chennai"); listView1.Items.Add("Madhurai"); listView1.Items.Add("Coimbatore");
+}
+if (treeView1.SelectedNode.Text == "kerala")
+{
+listView1.Items.Add("Kochin"); listView1.Items.Add("Kovalam"); listView1.Items.Add("Alleppey");
+}
+if (treeView1.SelectedNode.Text == "karnataka")
+{
+listView1.Items.Add("Mysore Palace"); listView1.Items.Add("Dandeli"); listView1.Items.Add("Kabini");
+}
+if (treeView1.SelectedNode.Text == "Goa")
+{
+listView1.Items.Add("Palolem Beach"); listView1.Items.Add("Vagator"); listView1.Items.Add("Agonda");
+}
+if (treeView1.SelectedNode.Text == "Meghalaya")
+{
+ 
+listView1.Items.Add("Elephant Falls"); listView1.Items.Add("Shillong"); listView1.Items.Add("Umiam Lake");
+}
+
+}
+}
+}
+OUTPUT:TREEVIEW,LISTVIEW,ADD STATES AND ADD CHILD,CLICK TREEVIEW
+-----------------------
+4) FLAG
+-------------------
+using System;
+using System.Collections.Generic; using System.ComponentModel; using System.Data;
+using System.Drawing; using System.Linq; using System.Text;
+using System.Windows.Forms;
+
+namespace countryflag
+{
+public partial class Form1 : Form
+{
+public Form1()
+{
+InitializeComponent();
+}
+private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+{
+int index = comboBox1.SelectedIndex; if(index.Equals(0))
+pictureBox1.Image = Properties.Resources.albania;
+if(index.Equals(1))
+pictureBox1.Image = Properties.Resources.australia;
+if(index.Equals(2))
+pictureBox1.Image = Properties.Resources.bangaladesh;
+if(index.Equals(3))
+pictureBox1.Image = Properties.Resources.Estonia;
+
+if(index.Equals(4))
+pictureBox1.Image = Properties.Resources.india;
+
+if(index.Equals(5))
+pictureBox1.Image = Properties.Resources.Mexico;
+
+if(index.Equals(6))
+pictureBox1.Image = Properties.Resources.pakistan;
+
+if (index.Equals(7))
+pictureBox1.Image = Properties.Resources.russia;
+}
+}
+}
+OTPUT:COMBOBOX,PICTURE BOX,SIZE,DROPDOWN
+----------------------------------
+5) LOGIN FORM USING ADO.NET
+---------------------------------
+using System;
+using System.Collections.Generic; using System.ComponentModel; using System.Data;
+using System.Drawing; using System.Linq; using System.Text;
+using System.Windows.Forms; using System.Data.OleDb;
+namespace logindata
+{
+public partial class Form1 : Form
+{
+public Form1()
+{
+InitializeComponent();
+}
+private void button1_Click(object sender, EventArgs e)
+{
+String constr=”Provider=Microsoft.ACE.OLEDB.12.0;DataSource=D:/20UN51/database.accdb”; OleDbConnection con = new OleDbConnection(constr);
+OleDbCommand cmd; con.Open();
+cmd = new OleDbCommand("select count(*)from sample where username='" + textBox1.Text + "' and password='" + textBox2.Text + "'", con);
+
+int i = int.Parse(cmd.ExecuteScalar().ToString()); if (i == 1)
+{
+ 
+
+}
+else
+{
+}
+ 
+MessageBox.Show("Login Succesfully");
+
+
+MessageBox.Show("Invalid Data");
+ 
+con.Close();
+}
+
+}
+}
+-----------------------
+6) LOGIN FORM USING ASP.NET
+-------------------------------
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+
+namespace WindowsFormsApplication2
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+          string constr = "Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\Users\\preet\\Documents\\Login.mdf;Integrated Security=True;Connect Timeout=30";
+
+            using (SqlConnection con = new SqlConnection(constr))
+            {
+                try
+                {
+                    con.Open();
+
+
+                    string query = "SELECT COUNT(*) FROM loginn WHERE username=@username AND password=@password";
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+
+                        cmd.Parameters.AddWithValue("@username", textBox1.Text);
+                        cmd.Parameters.AddWithValue("@password", textBox2.Text);
+
+
+                        int i = (int)cmd.ExecuteScalar();
+
+
+                        if (i == 1)
+                        {
+                            MessageBox.Show("Login Successfully");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Invalid Data");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+                finally
+                {
+
+                }
+
+            }
+        }
+    }
+}
+OUTPUT:CREATE DATABASE LOGIN AND TABLE NAME AS LOG USERNAME,PASSWORD
+------------------------------------------------------------------------------------------------
+ADO.NET
+1)ONLINE QUIZ( 1WAY)
+--------------------
+//quiz.aspx
+
+
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="quiz.aspx.cs" Inherits="WebApplication1.Scripts.quiz" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Quiz</title>
+</head>
+    <body bgcolor="pink">
+
+    
+
+    <form id="form1" runat="server">
+        <div>
+            <h1>      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      Online Quiz     </h1> 
+            1) Who invented C? <br />
+            <asp:RadioButton ID="r11" runat="server" GroupName="radio1" Text="Dennis Ritchie" /><br />
+            <asp:RadioButton ID="r12" runat="server" GroupName="radio1" Text="Bjarne Stroustrap" /><br />
+            <asp:RadioButton ID="r13" runat="server" GroupName="radio1" Text="James Gosling" /><br />
+            <asp:RadioButton ID="r14" runat="server" GroupName="radio1" Text="Mankin" /><br />
+            <br />
+
+            2) Who discovered C++? <br />
+            <asp:RadioButton ID="r21" runat="server" GroupName="radio2" Text="Dennis Ritchie" /><br />
+            <asp:RadioButton ID="r22" runat="server" GroupName="radio2" Text="Bjarne Stroustrap" /><br />
+            <asp:RadioButton ID="r23" runat="server" GroupName="radio2" Text="James Gosling" /><br />
+            <asp:RadioButton ID="r24" runat="server" GroupName="radio2" Text="Sandus" /><br />
+            <br />
+
+            3) Which attribute is used to convert a control to a server control? <br />
+            <asp:RadioButton ID="r31" runat="server" GroupName="radio3" Text="server" /><br />
+            <asp:RadioButton ID="r32" runat="server" GroupName="radio3" Text="runat" /><br />
+            <asp:RadioButton ID="r33" runat="server" GroupName="radio3" Text="Runat" /><br />
+            <asp:RadioButton ID="r34" runat="server" GroupName="radio3" Text="servercontrol" /><br />
+            <br />
+
+            4) Syntax for asp.net? <br />
+            <asp:RadioButton ID="r41" runat="server" GroupName="radio4" Text="/* */" /><br />
+            <asp:RadioButton ID="r42" runat="server" GroupName="radio4" Text="#/ /# " /><br />
+            <asp:RadioButton ID="r43" runat="server" GroupName="radio4" Text="%< >%" /><br />
+            <asp:RadioButton ID="r44" runat="server" GroupName="radio4" Text="<% %>" /><br />
+            <br />
+
+            5) Which property is used for MDI forms? <br />
+            <asp:RadioButton ID="r51" runat="server" GroupName="radio5" Text="mdiContainer" /><br />
+            <asp:RadioButton ID="r52" runat="server" GroupName="radio5" Text="mdiParent" /><br />
+            <asp:RadioButton ID="r53" runat="server" GroupName="radio5" Text="isMdiContainer" /><br />
+            <asp:RadioButton ID="r54" runat="server" GroupName="radio5" Text="mdi" /><br />
+            <br />
+
+            <asp:Button ID="b1" runat="server" OnClick="Button1_Click" Text="Submit" Width="103px" /><br />
+            <asp:Label ID="l1" runat="server" Text="" />
+        </div>
+    </form>
+</body>
+</html>
+
+
+//quiz.aspx.cs
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace WebApplication1.Scripts
+{
+    public partial class quiz : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            string result = "<h3>Quiz Results:</h3><br />";
+            int score = 0;
+           
+            if (r11.Checked)
+            {
+                result += "Q1: Correct! (Dennis Ritchie invented C)<br />";
+                score++;
+            }
+            else
+            {
+                result += "Q1: Incorrect!<br />";
+            }
+
+            if (r22.Checked)
+            {
+               result += "Q2: Correct! (Bjarne Stroustrap discovered C++)<br />";
+                score ++;
+            }
+            else
+            {
+                result += "Q2: Incorrect!<br />";
+            }
+
+            if (r32.Checked)
+            {
+                result += "Q3: Correct! (runat is used to convert to server control)<br />";
+                score++;
+            }
+            else
+            {
+                result += "Q3: Incorrect!<br />";
+            }
+
+            if (r44.Checked)
+            {
+                result += "Q4: Correct! (<% %> is the syntax for ASP.NET)<br />";
+                score++;
+            }
+            else
+            {
+                result += "Q4: Incorrect!<br />";
+            }
+
+            if (r53.Checked)
+            {
+                result += "Q5: Correct! (isMdiContainer is used for MDI forms)<br />";
+                score++;
+            }
+            else
+            {
+                result += "Q5: Incorrect!<br />";
+            }
+
+            // Display the result in the label
+
+            result += "<br>Your total score is: " + score.ToString() + " out of 5";
+            l1.Text = result;
+        }
+    }
+}
+        
+------------------------
+2)ONLINE QUIZ(2WAY)
+---------------------
+
+        
+    
+
+
+
+
+
+ 
+
+ 
+
+
+
+ 
+
+3)VALIDATION(1 WAY)
+----------------------------------------
+/STUDENTDATA.ASPX
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="studentdata.aspx.cs" Inherits="WebApplication4.Scripts.studentdata" %>
+
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Student Details</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <h3>Enter the Details:</h3><br /><br />
+
+            <!-- Name Field -->
+            Name: 
+            <asp:TextBox ID="t1" runat="server" />
+            <asp:RequiredFieldValidator 
+                ID="r1" 
+                ControlToValidate="t1" 
+                Text="The name is missing" 
+                ForeColor="Red" 
+                runat="server" />
+            <br /><br />
+
+            <!-- Age Field -->
+            Age: 
+            <asp:TextBox ID="t2" runat="server" />
+            <asp:RequiredFieldValidator 
+                ID="r2" 
+                ControlToValidate="t2" 
+                Text="The age is missing" 
+                ForeColor="Red" 
+                runat="server" />
+            <br /><br />
+
+            <!-- Date of Birth Field -->
+            Date of Birth: 
+            <asp:TextBox ID="t3" runat="server" />
+            <asp:RequiredFieldValidator 
+                ID="r3" 
+                ControlToValidate="t3" 
+                Text="The date of birth is missing" 
+                ForeColor="Red" 
+                runat="server" />
+            <br /><br />
+
+            <!-- Mark Field with Range Validation -->
+            Mark: 
+            <asp:TextBox ID="t4" runat="server" />
+            <asp:RangeValidator 
+                ID="r4" 
+                ControlToValidate="t4" 
+                MinimumValue="1" 
+                MaximumValue="100"
+                Type="Integer" 
+                Text="Enter a mark between 1 and 100" 
+                ForeColor="Red" 
+                runat="server" />
+            <br /><br />
+
+            <!-- Email Field with Regular Expression Validation -->
+            Email ID: 
+            <asp:TextBox ID="t5" runat="server" />
+            <asp:RegularExpressionValidator 
+                ID="r5" 
+                ControlToValidate="t5" 
+                ValidationExpression="^\S+@\S+\.\S+$" 
+                Text="Invalid email format" 
+                ForeColor="Red" 
+                runat="server" />
+            <br /><br />
+
+            <!-- Password Field -->
+            Password: 
+            <asp:TextBox ID="t6" TextMode="Password" runat="server" />
+            <asp:RequiredFieldValidator 
+                ID="r6" 
+                ControlToValidate="t6" 
+                Text="Password is required" 
+                ForeColor="Red" 
+                runat="server" />
+            <br /><br />
+
+            <!-- Retype Password Field with Compare Validation -->
+            Retype Password: 
+            <asp:TextBox ID="t7" TextMode="Password" runat="server" />
+            <asp:CompareValidator 
+                ID="c1" 
+                ControlToValidate="t7" 
+                ControlToCompare="t6" 
+                Text="Passwords do not match" 
+                ForeColor="Red" 
+                runat="server" />
+            <br /><br />
+
+            <!-- Mobile Number Field with Regular Expression Validation -->
+            Mobile Number: 
+            <asp:TextBox ID="t8" runat="server" />
+            <asp:RegularExpressionValidator 
+                ID="r7" 
+                ControlToValidate="t8" 
+                ValidationExpression="^\d{10}$" 
+                Text="Enter a valid 10-digit mobile number" 
+                ForeColor="Red" 
+                runat="server" />
+            <br /><br />
+
+            <!-- Submit Button -->
+            <asp:Button ID="b1" Text="Submit" OnClick="Button1_Click" runat="server" /><br /><br />
+
+            <!-- Label for success or error message -->
+            <asp:Label ID="l1" runat="server" ForeColor="Green" />
+        </div>
+    </form>
+</body>
+</html>
+/STUDENTDATA.ASPX.CS
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+
+namespace WebApplication4.Scripts
+{
+    public partial class studentdata : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            string details = "<br>Student Details<br>" + "Name: " + t1.Text + "<br>"
++ "Age: " + t2.Text + "<br>"
++ "Date of Birth: " + t3.Text + "<br>"
++ "Mark: " + t4.Text + "<br>"
++ "Email ID: " + t5.Text + "<br>"
++ "Password: " + t6.Text + "<br>"
++ "Retype Password: " + t7.Text + "<br>"
++ "Mobile Number: " + t8.Text + "<br>";
+
+            l1.Text = details;
+
+
+            string connectionString = "Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\Users\\preet\\Documents\\StudentData.mdf;Integrated Security=True;Connect Timeout=30";
+
+            SqlConnection con = new SqlConnection(connectionString);
+            try
+            {
+
+                con.Open();
+
+
+                string query = "INSERT INTO info (name, mark, pass, email, phno) VALUES ('" + t1.Text + "', '" + t4.Text + "', '" + t6.Text + "', '" + t5.Text + "', '" +
+                t8.Text + "')";
+
+
+                SqlCommand cmd = new SqlCommand(query, con);
+
+
+                int rowsAffected = cmd.ExecuteNonQuery();
+
+
+                if (rowsAffected > 0)
+                {
+                    l1.Text += "<br>Data inserted successfully!";
+
+                }
+                else
+                {
+                    l1.Text += "<br>Error inserting data.";
+                }
+            }
+            catch (Exception ex)
+            {
+                l1.Text += "<br>Error: " + ex.Message;
+            }
+            finally
+            {
+
+                con.Close();
+            }
+        }
+    }
+}
+------------------------------------
+4)VALIDATION(2WAY)
+-------------------------
+/STUDENT DATA.ASPX
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="studentdata.aspx.cs" Inherits="WebApplication4.Scripts.studentdata" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Student Details</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <h3>Enter the Details:</h3><br /><br />
+
+            <!-- Name Field -->
+            Name: 
+            <asp:TextBox ID="t1" runat="server" />
+            <asp:RequiredFieldValidator 
+                ID="r1" 
+                ControlToValidate="t1" 
+                Text="The name is missing" 
+                ForeColor="Red" 
+                runat="server" />
+            <br /><br />
+
+            <!-- Age Field -->
+            Age: 
+            <asp:TextBox ID="t2" runat="server" />
+            <asp:RequiredFieldValidator 
+                ID="r2" 
+                ControlToValidate="t2" 
+                Text="The age is missing" 
+                ForeColor="Red" 
+                runat="server" />
+            <br /><br />
+
+            <!-- Date of Birth Field -->
+            Date of Birth: 
+            <asp:TextBox ID="t3" runat="server" />
+            <asp:RequiredFieldValidator 
+                ID="r3" 
+                ControlToValidate="t3" 
+                Text="The date of birth is missing" 
+                ForeColor="Red" 
+                runat="server" />
+            <br /><br />
+
+            <!-- Mark Field with Range Validation -->
+            Mark: 
+            <asp:TextBox ID="t4" runat="server" />
+            <asp:RangeValidator 
+                ID="r4" 
+                ControlToValidate="t4" 
+                MinimumValue="1" 
+                MaximumValue="100"
+                Type="Integer" 
+                Text="Enter a mark between 1 and 100" 
+                ForeColor="Red" 
+                runat="server" />
+            <br /><br />
+
+            <!-- Email Field with Regular Expression Validation -->
+            Email ID: 
+            <asp:TextBox ID="t5" runat="server" />
+            <asp:RegularExpressionValidator 
+                ID="r5" 
+                ControlToValidate="t5" 
+                ValidationExpression="^\S+@\S+\.\S+$" 
+                Text="Invalid email format" 
+                ForeColor="Red" 
+                runat="server" />
+            <br /><br />
+
+            <!-- Password Field -->
+            Password: 
+            <asp:TextBox ID="t6" TextMode="Password" runat="server" />
+            <asp:RequiredFieldValidator 
+                ID="r6" 
+                ControlToValidate="t6" 
+                Text="Password is required" 
+                ForeColor="Red" 
+                runat="server" />
+            <br /><br />
+
+            <!-- Retype Password Field with Compare Validation -->
+            Retype Password: 
+            <asp:TextBox ID="t7" TextMode="Password" runat="server" />
+            <asp:CompareValidator 
+                ID="c1" 
+                ControlToValidate="t7" 
+                ControlToCompare="t6" 
+                Text="Passwords do not match" 
+                ForeColor="Red" 
+                runat="server" />
+            <br /><br />
+
+            <!-- Mobile Number Field with Regular Expression Validation -->
+            Mobile Number: 
+            <asp:TextBox ID="t8" runat="server" />
+            <asp:RegularExpressionValidator 
+                ID="r7" 
+                ControlToValidate="t8" 
+                ValidationExpression="^\d{10}$" 
+                Text="Enter a valid 10-digit mobile number" 
+                ForeColor="Red" 
+                runat="server" />
+            <br /><br />
+
+            <!-- Submit Button -->
+            <asp:Button ID="b1" Text="Submit" OnClick="Button1_Click" runat="server" /><br /><br />
+
+            <!-- Label for success or error message -->
+            <asp:Label ID="l1" runat="server" ForeColor="Green" />
+        </div>
+    </form>
+</body>
+</html>
+/STUDENT DATA.ASPX.CS
+using System;
+using System.Web.UI;
+
+namespace WebApplication4.Scripts
+{
+    public partial class studentdata : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            // Capture the student details
+            string details = "<br>Student Details<br>" + 
+                "Name: " + t1.Text + "<br>" +
+                "Age: " + t2.Text + "<br>" +
+                "Date of Birth: " + t3.Text + "<br>" +
+                "Mark: " + t4.Text + "<br>" +
+                "Email ID: " + t5.Text + "<br>" +
+                "Password: " + t6.Text + "<br>" +
+                "Retype Password: " + t7.Text + "<br>" +
+                "Mobile Number: " + t8.Text + "<br>";
+
+            // Display the student details on the page
+            l1.Text = details;
+
+            // Display a success message
+            l1.Text += "<br>Data displayed successfully!";
+        }
+    }
+}
+---------------------------------------
+5)FEEDBACK FORM
+---------------------------
+/FEEDBACK.APSX
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Feedback.aspx.cs" Inherits="WebApplication3.Scripts.Feedback" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+<title></title>
+</head>
+<body >
+    &nbsp;<form id="form1" runat="server">
+<asp:Label ID="l8" runat="server" Text="FEED BACK FORM"/><br/>
+       
+       
+<asp:Label ID="l1" runat="server" Text="name" />
+<asp:TextBox ID="t1" runat="server" /><br/>
+<asp:Label ID="l2" runat="server" Text="Rollno"/>
+<asp:TextBox ID="t2" runat="server" /><br/>
+<asp:Label ID="l3" runat="server" Text="Course"/>
+<asp:TextBox ID="t3" runat="server" /><br/>
+<asp:Label ID="l4" runat="server" Text="Was this session useful to you?"/>
+<asp:TextBox ID="t4" runat="server" /><br/>
+<asp:Label ID="l5" runat="server" Text="What are the things you learnt from the session?"/>
+<asp:TextBox ID="t5" runat="server" /><br/>
+<asp:Label ID="l6" runat="server" Text="Do you have any clarifications?"/>
+<asp:TextBox ID="t6" runat="server" /><br/>
+<asp:Label ID="l7" runat="server" Text="Inquiry"/>
+<asp:TextBox ID="t7" runat="server" /><br/>
+<asp:Button ID="b1" runat="server" OnClick="Button1_click" Text="Send"/>
+</form>
+</body>
+</html>
+/FEEDBACK.ASPX.CS
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data.OleDb; 
+
+namespace WebApplication3.Scripts
+{
+    public partial class Feedback : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button1_click(object sender, EventArgs e)
+        {
+            OleDbConnection con = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\\Users\\preet\\Documents\\stu.mdb");
+            string sqlQuery = "INSERT INTO stud (name, Rollno, Course, [Was this session useful to you?], [What are the things you learnt from the session?], [Do you have any clarifications?], Inquiry) " +
+                   "VALUES (?, ?, ?, ?, ?, ?, ?)";
+
+
+           
+            OleDbCommand cmd = new OleDbCommand(sqlQuery, con);
+
+
+           
+            cmd.Parameters.AddWithValue("?", t1.Text); 
+            cmd.Parameters.AddWithValue("?", t2.Text);  
+            cmd.Parameters.AddWithValue("?", t3.Text);  
+            cmd.Parameters.AddWithValue("?", t4.Text); 
+            cmd.Parameters.AddWithValue("?", t5.Text);  
+            cmd.Parameters.AddWithValue("?", t6.Text);  
+            cmd.Parameters.AddWithValue("?", t7.Text);  
+
+            try
+            {
+                
+                con.Open();
+
+                
+                int n = cmd.ExecuteNonQuery();
+
+                
+                if (n > 0)
+                {
+                    Response.Write("<center><b>Successfully Saved..Thank You!!!</b></center>");
+                }
+                else
+                {
+                    Response.Write("<center><b>Error: Could not save the data. Please try again.</b></center>");
+                }
+            }
+            catch (Exception ex)
+            {
+                
+                Response.Write("<center><b>Error: " + ex.Message + "</b></center>");
+            }
+            finally
+            {
+               
+                con.Close();
+            }
+        }
+    }
+}
+--------------------------------------------------
+ANDROID 
+1)ALERT BOX(1WAY)-SPIRAL
+------------------------
+DESIGN
+<Button
+    android:id="@+id/button_show_alert"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Show Alert" />
+
+
+CODE
+package com.example.allerrtttt;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        // Find the button by its ID
+        Button showAlertButton = findViewById(R.id.button_show_alert);
+
+        // Set an OnClickListener for the button
+        showAlertButton.setOnClickListener(v -> showAlertDialog());
+    }
+
+    // Method to show the alert dialog
+    private void showAlertDialog() {
+        // Create an AlertDialog Builder
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        
+        // Set the title, message, and button actions
+        builder.setTitle("Confirm Exit")
+               .setMessage("Are you sure you want to exit?")
+               .setPositiveButton("Yes", (dialog, which) -> finish()) // Close the app
+               .setNegativeButton("No", (dialog, which) -> dialog.cancel()); // Dismiss the dialog
+
+        // Create and show the alert dialog
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+    }
+}
+------------------------
+2)ALERT BOX(2WAY )
+DESIGN
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/alertButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Alert" />
+
+</LinearLayout>
+CODE
+package com.example.alert;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import android.content.DialogInterface;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+public class MainActivity extends AppCompatActivity {
+
+    Button alertButton;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        alertButton = findViewById(R.id.alertButton);
+
+        alertButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Create and show the AlertDialog
+                showAlert();
+            }
+        });
+    }
+
+    private void showAlert() {
+        // Create an AlertDialog.Builder
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+
+        // Set the title, message, and buttons
+        builder.setTitle("Alert")
+                .setMessage("This is a simple alert box.")
+                .setCancelable(true)
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // Do something when OK is clicked (optional)
+                        dialog.dismiss(); // Close the dialog
+                        System.exit(0);
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        // Do something when Cancel is clicked (optional)
+                        dialog.dismiss(); // Close the dialog
+                    }
+                });
+
+        // Create and show the AlertDialog
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
+}
+--------------------------------------------
+3)CALCULATOR(1WAY)
+-----------------------
+DESIGN 
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextNumber1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter first number"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/editTextNumber2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter second number"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add" />
+
+    <Button
+        android:id="@+id/buttonSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subtract" />
+
+    <Button
+        android:id="@+id/buttonMul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Multiply" />
+
+    <Button
+        android:id="@+id/buttonDiv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Divide" />
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result will be shown here"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>
+
+CODE
+package com.example.calc_app;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class MainActivity extends AppCompatActivity {
+
+    private EditText number1;
+    private EditText number2;
+    private Button addButton;
+    private Button subButton;
+    private Button mulButton;
+    private Button divButton;
+    private TextView resultText;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        // Initialize views
+        number1 = findViewById(R.id.editTextNumber1); // Change to proper IDs
+        number2 = findViewById(R.id.editTextNumber2); // Change to proper IDs
+        addButton = findViewById(R.id.buttonAdd);
+        subButton = findViewById(R.id.buttonSub);
+        mulButton = findViewById(R.id.buttonMul);
+        divButton = findViewById(R.id.buttonDiv);
+        resultText = findViewById(R.id.textViewResult);
+
+        // Set OnClickListeners
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                performOperation("add");
+            }
+        });
+
+        subButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                performOperation("sub");
+            }
+        });
+
+        mulButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                performOperation("mul");
+            }
+        });
+
+        divButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                performOperation("div");
+            }
+        });
+    }
+
+    private void performOperation(String operation) {
+        // Get input values
+        String input1 = number1.getText().toString();
+        String input2 = number2.getText().toString();
+
+        if (input1.isEmpty() || input2.isEmpty()) {
+            Toast.makeText(this, "Please enter both numbers", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        try {
+            int num1 = Integer.parseInt(input1);
+            int num2 = Integer.parseInt(input2);
+            int result = 0;
+
+            switch (operation) {
+                case "add":
+                    result = num1 + num2;
+                    resultText.setText("The sum is: " + result);
+                    break;
+
+                case "sub":
+                    result = num1 - num2;
+                    resultText.setText("The difference is: " + result);
+                    break;
+
+                case "mul":
+                    result = num1 * num2;
+                    resultText.setText("The product is: " + result);
+                    break;
+
+                case "div":
+                    if (num2 != 0) {
+                        result = num1 / num2;
+                        resultText.setText("The quotient is: " + result);
+                    } else {
+                        resultText.setText("Cannot divide by zero");
+                    }
+                    break;
+            }
+        } catch (NumberFormatException e) {
+            Toast.makeText(this, "Invalid input, please enter valid numbers", Toast.LENGTH_SHORT).show();
+        }
+    }
+}
+----------------------------------
+4)CALCULATOR(2WAY)
+-----------------
+DESIGN 
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/input1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="Enter first number" />
+
+    <EditText
+        android:id="@+id/input2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="Enter second number" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result: "
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add" />
+
+    <Button
+        android:id="@+id/btnSubtract"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subtract" />
+
+    <Button
+        android:id="@+id/btnMultiply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Multiply" />
+
+    <Button
+        android:id="@+id/btnDivide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Divide" />
+
+</LinearLayout>
+CODE
+package com.example.calculator;
+
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    EditText input1, input2;
+    TextView result;
+    Button btnAdd, btnSubtract, btnMultiply, btnDivide;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        input1 = findViewById(R.id.input1);
+        input2 = findViewById(R.id.input2);
+        result = findViewById(R.id.result);
+        btnAdd = findViewById(R.id.btnAdd);
+        btnSubtract = findViewById(R.id.btnSubtract);
+        btnMultiply = findViewById(R.id.btnMultiply);
+        btnDivide = findViewById(R.id.btnDivide);
+
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                double num1 = Double.parseDouble(input1.getText().toString());
+                double num2 = Double.parseDouble(input2.getText().toString());
+                double sum = num1 + num2;
+                result.setText("Result: " + sum);
+            }
+        });
+
+        btnSubtract.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                double num1 = Double.parseDouble(input1.getText().toString());
+                double num2 = Double.parseDouble(input2.getText().toString());
+                double difference = num1 - num2;
+                result.setText("Result: " + difference);
+            }
+        });
+
+        btnMultiply.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                double num1 = Double.parseDouble(input1.getText().toString());
+                double num2 = Double.parseDouble(input2.getText().toString());
+                double product = num1 * num2;
+                result.setText("Result: " + product);
+            }
+        });
+
+        btnDivide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                double num1 = Double.parseDouble(input1.getText().toString());
+                double num2 = Double.parseDouble(input2.getText().toString());
+                if (num2 != 0) {
+                    double quotient = num1 / num2;
+                    result.setText("Result: " + quotient);
+                } else {
+                    result.setText("Cannot divide by zero");
+                }
+            }
+        });
+    }
+}
+----------------------------
+
+
+
+       
+
+
+
