@@ -993,6 +993,76 @@ namespace WebApplication1.Scripts
 ------------------------
 2)ONLINE QUIZ(2WAY)
 ---------------------
+/quiz.aspx
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="WebApplication5.Scripts.WebForm1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+    
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ONLINE QUIZ<br />
+        <br />
+        <asp:Label ID="Label1" runat="server" Text="1)What is the colour of milk?"></asp:Label>
+    
+    </div>
+        <asp:RadioButtonList ID="r1" runat="server">
+            <asp:ListItem Value="0">Blue</asp:ListItem>
+            <asp:ListItem Value="1">White</asp:ListItem>
+            <asp:ListItem Value="0">Colourless</asp:ListItem>
+        </asp:RadioButtonList>
+        <br />
+        <asp:Label ID="Label2" runat="server" Text="2)Dennis ritchie developed?"></asp:Label>
+        <br />
+        <asp:RadioButtonList ID="r2" runat="server">
+            <asp:ListItem Value="1">c</asp:ListItem>
+            <asp:ListItem Value="0">c++</asp:ListItem>
+            <asp:ListItem Value="0">c#</asp:ListItem>
+        </asp:RadioButtonList>
+        <asp:Button ID="Button1" runat="server" Onclick="button1_click" Text="Submit" />
+        <br />
+        <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+    </form>
+</body>
+</html>
+//quiz.aspx.cs
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace WebApplication5.Scripts
+{
+    public partial class WebForm1 : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void button1_click(object sender, EventArgs e)
+        {
+            int score = 0;
+            if (r1.SelectedValue == "1")
+            {
+                score++;
+            }
+            if (r2.SelectedValue == "1")
+            {
+                score++;
+            }
+            Label3.Text = "your Score" + score;
+        }
+    }
+}
+
 
         
     
